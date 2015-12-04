@@ -1,3 +1,33 @@
-<ion-view>
-  <ion-content>Dashboard tab</ion-content>
-</ion-view>
+<ion-nav-view name="home-dash">
+	<ion-view title="TurnKey Assist" hide-nav-bar="true">
+	  <ion-content>
+	 	<h1 class="padding" align="center">TurnKey Assist</h1>	
+	 	
+	 	<div>
+	 			<h3 style="text-align:center;">What is TurnKey Personal Home Organizer?</h3>
+	 			<ion-slide-box on-slide-changed="slideHasChanged($index)" style="top:300px;height:250px;">
+	 			
+				  <ion-slide>  
+				    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut nunc sollicitudin, convallis sem nec, imperdiet diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut purus tellus, consequat eget vestibulum a, tempus eget augue. Suspendisse potenti. Maecenas in fringilla felis, ac pharetra odio. Nullam ac hendrerit dui.</p></div>
+				  </ion-slide>
+				  <ion-slide>
+				    <div><p>Aliquam commodo mi sit amet nulla ornare, non gravida diam rutrum. In hac habitasse platea dictumst. Vestibulum ullamcorper leo mauris, a porttitor magna fermentum et. Praesent molestie purus id vehicula dictum. Cras viverra lectus ac odio ultrices dignissim. Vestibulum a varius est. Suspendisse et ipsum tempus, fermentum nisl vitae, ullamcorper magna. Duis libero risus, posuere a bibendum sed, ornare sit amet metus.</p></div>
+				  </ion-slide>
+				  <ion-slide >
+				    <div><p>Phasellus lobortis tempor diam, sed varius lectus posuere in. Vestibulum et sodales elit. Duis ullamcorper odio pellentesque lorem condimentum, id cursus diam luctus. Vivamus dictum odio a ante sagittis suscipit. Nulla venenatis justo erat, vel tincidunt quam varius et. Sed ut dapibus ex. Donec pulvinar ante lacus, posuere vestibulum urna gravida sit amet.</p></div>
+				  </ion-slide>
+				</ion-slide-box>
+
+	 	</div>
+	  	
+	  </ion-content>
+
+	<div ng-show="showFooterToken === 1" class="bar bar-footer" style="height: 50px;padding:0px;">
+		  <div class="button-bar">
+	  		<button class="button progress-button" ui-sref="home.signup">Sign Up</button>
+	  		<button class="button progress-button" ui-sref="home.login">Login</button>
+	  	</div>
+	</div>
+	</ion-view>
+</ion-nav-view>
+

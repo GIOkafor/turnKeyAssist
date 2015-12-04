@@ -1,0 +1,64 @@
+<ion-view view-title="CREATE A REALTOR ACCOUNT" hide-nav-bar="false">
+	<ion-content>
+		<form ng-submit="addUser(user)" name="realtor-signup-form">
+
+			<h4>Account Information</h4>
+			<div class="list">	
+				<label class="item item-input">
+					<input type="text" placeholder="Email Address" ng-model="user.email" required>
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="user.password" required>
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Confirm Password" ng-model="user.password2" required>
+				</label>
+			</div>
+
+			
+			<div class="list list-inset">
+			<h4>Personal Information</h4>	
+				<div class="item item-input-inset" style="padding-bottom:0px;padding-top:0px;">
+					<label class="item-input" style="border-right: 1px solid #ddd">
+						<input type="text" placeholder="First Name" ng-model="user.firstname" required>
+					</label>
+					<label class="item-input">
+						<input type="text" placeholder="Last Name" ng-model="user.lastname" required>
+					</label>
+				</div>
+				
+				<label class="item item-input">
+					<input type="number" placeholder="Primary Telephone" ng-model="user.primarytelephone" required>
+				</label>
+				<label class="item item-input">
+					<input type="number" placeholder="Mobile Telephone" ng-model="user.mobiletelephone">
+				</label>
+
+				<div class="item item-input-inset">
+					<select class="padding" ng-model="user.country" ng-options="c for c in countries" required>
+					</select>
+					<label class="item item-input" style="margin-left: 10px">
+						<input type="text" placeholder="City" required>
+					</label>
+				</div>
+				<label class="item item-input item-select">
+					<span class="input label">Years of Industry Experience</span>
+					<select ng-model="user.yearsexperience">
+						<option ng-value="1" >1</option>
+						<option ng-value="5" >5</option>
+						<option ng-value="10" >10</option>
+						<option ng-value="20" >20</option>
+					</select>
+				</label>
+			</div>
+
+			<div style="text-align:center;width:100%;">
+				<button style="width:45%;" class="button button-assertive">Cancel</button>
+				<input type="submit" ui-sref="home.realtor-step-2" style="width:45%;" class="button button-balanced" value="Submit" ng-click="addUser(user)">
+			</div>
+		</form>
+
+		<pre>user = {{user | json}}</pre>
+		<pre>All users = {{users | json}}</pre>
+	</ion-content>
+</ion-view>

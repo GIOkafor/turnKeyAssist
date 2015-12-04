@@ -1,6 +1,12 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicSlideBoxDelegate) {
+  $scope.showFooterToken = 1;
+
+  $scope.slideHasChanged = function(index){
+    $scope.slideIndex = index;
+  }
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -27,6 +33,14 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('RetailerSignUpCtrl', function($scope) {
-  
+.controller('RealtorSignUpCtrl', function($scope, Users) {
+  $scope.countries = ['Canada', 'United States'];
+
+  $scope.canadaProvinces = ['Ontario', 'Quebec', 'Nova Scotia', 'New Brunswick', 'Manitoba', 'British Columbia', 'Prince Edward Island', 'Sasktchewan', 'Alberta', 'Newfoundland and Labrador'];
+
+  $scope.users = Users.realtors;
+
+  $scope.addUser = function (user) {
+    $scope.users.push(angular.copy(user));
+  };
 });

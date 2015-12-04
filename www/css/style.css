@@ -1,1 +1,41 @@
 /* Empty. Add your own CSS if you like */
+.status-bar{
+  background-color: #636363;
+}
+.userAuth{
+  background-color: #2f2f2f;
+}
+.progress-button{
+  background-color:#ffa801;
+  color: #fff;
+}
+.countrySelector{
+	margin-top:12.5px;
+	overflow: visible;
+	left: 0px;
+}
+.item{
+	margin: 5px;
+}
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+.theme-selector{
+
+}
+.themeSelect{
+  display: inline-block;
+
+}
+.col1, .col2, .col3{
+  background: grey;
+  text-align: center;
+  }

@@ -1,0 +1,60 @@
+<ion-view view-title="YOU'RE ALMOST DONE" hide-nav-bar="false">
+	<ion-content>
+		<div class="list">
+				<h5>Profile Photo</h5>
+				<div class="item item-input-inset">
+					<label class="item-input-wrapper">
+						<input type="text" placeholder="URL"></label>
+					</label>
+					<button class="button button-small">Upload</button>
+				</div>
+				
+				<h5>Status Message & Bio</h5>
+				<label class="item item-input">
+					<input type="text" placeholder="Specify a Status Message">
+				</label>
+
+				<label  class="item item-input">
+					<textarea rows="5" cols="10" placeholder="Specify a short bio..."></textarea> 
+				</label>
+
+				<div class="theme-selector">
+					<div class="row row1">
+						<div class="col col1">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+						</div>
+					</div>
+
+					<div class="row row2">
+						<div class="col col2">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+						</div>
+					</div>
+
+					<div class="row row3">
+						<div class="col col3">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+							<input type="radio" name="theme-select" class="themeSelect">
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom-btn-2" style="text-align:center;width:100%;">
+					<button style="width:45%;" class="item button button-stable" href="/signup/realtor/realtor-step-3">Skip</button>
+					<button style="width:45%;" class="item button button-balanced" ui-sref="home.realtor-step-3">Continue</button>
+				</div>
+				Users added so far: {{users | json}}
+		</div>
+	</ion-content>
+</ion-view>
