@@ -1,60 +1,58 @@
-<ion-view view-title="YOU'RE ALMOST DONE" hide-nav-bar="false">
-	<ion-content>
+<ion-view view-title="YOU'RE ALMOST DONE" hide-nav-bar="false" class="userAuth">
+	<ion-content class="padding">
+	<img class="realtor-signup-step2-application-status" src="img/Icon_4StepNav_02.png" style="display:block;width:80%;margin:0 auto;">
 		<div class="list">
-				<h5>Profile Photo</h5>
-				<div class="item item-input-inset">
-					<label class="item-input-wrapper">
+			<form>
+				<h4>Profile Photo</h4>
+				<div class="item-input-inset">
+					<label class="item item-input" style="margin-right:0px">
 						<input type="text" placeholder="URL"></label>
 					</label>
-					<button class="button button-small">Upload</button>
+					<button class="button progress-button">Upload</button>
 				</div>
 				
-				<h5>Status Message & Bio</h5>
+				<h4>Status Message & Bio</h4>
 				<label class="item item-input">
-					<input type="text" placeholder="Specify a Status Message">
+					<input type="text" placeholder="Specify a Status Message" ng-model="user.statusMessage">
 				</label>
 
 				<label  class="item item-input">
-					<textarea rows="5" cols="10" placeholder="Specify a short bio..."></textarea> 
+					<textarea rows="5" cols="10" placeholder="Specify a short bio..." ng-model="user.shortBio"></textarea> 
 				</label>
 
 				<div class="theme-selector">
-					<div class="row row1">
-						<div class="col col1">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-						</div>
+					<h4>Theme</h4>
+					<div class="theme-row">
+						<span class="theme1"><input type="radio" name="theme-color"></span>
+						<span class="theme2"><input type="radio" name="theme-color"></span>
+						<span class="theme3"><input type="radio" name="theme-color"></span>
+						<span class="theme4"><input type="radio" name="theme-color"></span>
+						<span class="theme5"><input type="radio" name="theme-color"></span>
+					</div>	
+
+					<div class="theme-row">
+						<span class="theme6"><input type="radio" name="theme-color"></span>
+						<span class="theme7"><input type="radio" name="theme-color"></span>
+						<span class="theme8"><input type="radio" name="theme-color"></span>
+						<span class="theme9"><input type="radio" name="theme-color"></span>
+						<span class="theme10"><input type="radio" name="theme-color"></span>
 					</div>
 
-					<div class="row row2">
-						<div class="col col2">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-						</div>
+					<div class="theme-row">
+						<span class="theme11"><input type="radio" name="theme-color"></span>
+						<span class="theme12"><input type="radio" name="theme-color"></span>
+						<span class="theme13"><input type="radio" name="theme-color"></span>
+						<span class="theme14"><input type="radio" name="theme-color"></span>
+						<span class="theme15"><input type="radio" name="theme-color"></span>
 					</div>
-
-					<div class="row row3">
-						<div class="col col3">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-							<input type="radio" name="theme-select" class="themeSelect">
-						</div>
-					</div>
+					
 				</div>
 
-				<div class="bottom-btn-2" style="text-align:center;width:100%;">
-					<button style="width:45%;" class="item button button-stable" href="/signup/realtor/realtor-step-3">Skip</button>
-					<button style="width:45%;" class="item button button-balanced" ui-sref="home.realtor-step-3">Continue</button>
+				<div class="bottom-btn-2" >
+					<button style="width:45%;" class="item button skip-button" href="/signup/realtor/realtor-step-3">Skip</button>
+					<button style="width:45%;float:right;" class="item button progress-button" ui-sref="home.realtor-step-3">Continue</button>
 				</div>
-				Users added so far: {{users | json}}
+			</form>
 		</div>
 	</ion-content>
 </ion-view>

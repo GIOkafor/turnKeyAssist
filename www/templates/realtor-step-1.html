@@ -1,5 +1,6 @@
-<ion-view view-title="CREATE A REALTOR ACCOUNT" hide-nav-bar="false">
-	<ion-content>
+<ion-view view-title="CREATE A REALTOR ACCOUNT" hide-nav-bar="false" class="userAuth">
+	<ion-content class="padding">
+		<img src="img/Icon_4StepNav_01.png" style="display:block;width:80%;margin:0 auto;">
 		<form ng-submit="addUser(user)" name="realtor-signup-form">
 
 			<h4>Account Information</h4>
@@ -15,9 +16,7 @@
 				</label>
 			</div>
 
-			
-			<div class="list list-inset">
-			<h4>Personal Information</h4>	
+			<h4>Personal Information</h4>
 				<div class="item item-input-inset" style="padding-bottom:0px;padding-top:0px;">
 					<label class="item-input" style="border-right: 1px solid #ddd">
 						<input type="text" placeholder="First Name" ng-model="user.firstname" required>
@@ -53,12 +52,8 @@
 			</div>
 
 			<div style="text-align:center;width:100%;">
-				<button style="width:45%;" class="button button-assertive">Cancel</button>
-				<input type="submit" ui-sref="home.realtor-step-2" style="width:45%;" class="button button-balanced" value="Submit" ng-click="addUser(user)">
-			</div>
+				<button style="width:45%;" class="button skip-button">Cancel</button>
+				<input type="submit" ui-sref="home.realtor-step-2" style="width:45%;" class="button progress-button" value="Submit" ng-click="addUser(user)">
 		</form>
-
-		<pre>user = {{user | json}}</pre>
-		<pre>All users = {{users | json}}</pre>
 	</ion-content>
 </ion-view>

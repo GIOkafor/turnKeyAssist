@@ -1,12 +1,13 @@
-<ion-view view-title="You're Almost Done" hide-nav-bar="false">
-	<ion-content>
+<ion-view view-title="You're Almost Done" hide-nav-bar="false" class="userAuth">
+	<ion-content class="padding realtor-signup-step-3">
+		<img src="img/Icon_4StepNav_03.png" style="display:block;width:80%;margin:0 auto;">
 		<form style="margin:10px;">
 			<h4>Company/Brokerage Logo</h4>	
-			<div class="item item-input-inset">
-				<label class="item-input-wrapper">
-					<input type="text" class="padding" placeholder="URL">
+			<div class="item-input-inset" style="paDDING-left:0px;">
+				<label class="item item-input" style="margin-right:0px;width:75%;">
+					<input type="text" placeholder="URL">
 				</label>
-				<button class="button button-small" >Upload</button>
+				<button class="button" style="width:25%;">Upload</button>
 			</div>
 			
 			<div class="company-info">
@@ -15,17 +16,19 @@
 				<input type="text" placeholder="Address" ng-model="user.address">
 				<input type="number" placeholder="Telephone" ng-model="user.telephone">
 				<span>
-					<select ng-options="c for c in countries" ng-model="user.companyCountry"><option value="" disabled selected>Country</option>
+					<select ng-options="c for c in countries" ng-model="user.companyCountry" style="flex:1;"><option value="" disabled selected>Country</option>
 					</select>
-					<select ng-options="p for p in canadaProvinces" ng-model="user.state"><option value="" disabled selected>Province/State</option></select>
+					<select ng-options="p for p in canadaProvinces" ng-model="user.state" style="flex:1;"><option value="" disabled selected>Province/State</option></select>
 				</span>
-				<div class="item item-input-inset"><!-- companyCity????? -->
-					<input class="item-input-wrapper" style="margin:5px;" type="text" ng-model="user.companyCity" placeholder="City">
-					<input class="item-input-wrapper" style="margin:5px;" type="text" placeholder="Postal Code/ Zip" ng-model="user.postalCode">
-				</div>
+
+				<span>
+					<input type="text" ng-model="user.companyCity" placeholder="City">
+					<input type="text" placeholder="Postal Code/ Zip" ng-model="user.postalCode">
+				</span>
+				
 
 				<input placeholder="Website URL" ng-model="user.webURL" style="width:100%;">
-				<input type="submit" class="button button-balanced button-full" value="Continue" style="width:100%;" ng-click="addUser(user)">
+				<input type="submit" class="button button-balanced button-full" value="Continue" style="width:100%;" ng-click="addUser(user)" ui-sref="home.realtor-lastStep">
 			</div>
 		</form>
 		User info: {{user}}

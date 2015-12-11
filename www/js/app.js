@@ -97,6 +97,56 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'RealtorSignUpCtrl'
       }
     }
+  })
+
+  .state('home.realtor-lastStep',{
+    url: '/signup/realtor/realtor-lastStep',
+    views: {
+      'home-dash': {
+        templateUrl: 'templates/realtor-lastStep.html',
+        controller: 'RealtorSignUpCtrl'
+      }
+    }
+  })
+
+  .state('home.homeowner-signup',{
+    url: '/signup/homeowner',
+    views: {
+      'home-dash': {
+      templateUrl: 'templates/homeowner-signup.html',
+      controller: 'HomeownerSignUpCtrl'
+      }
+    }
+  })
+
+  .state('home.client-step1', {
+    url: 'signup/homeowner/step1',
+    views: {
+      'home-dash': {
+        templateUrl: 'templates/client-step1.html',
+        controller: 'HomeownerSignUpCtrl'
+      }
+    }
+  })
+
+    .state('home.client-step2', {
+    url: 'signup/homeowner/step2',
+    views: {
+      'home-dash': {
+        templateUrl: 'templates/client-step2.html',
+        controller: 'HomeownerSignUpCtrl'
+      }
+    }
+  })
+
+    .state('home.client-dashboard', {
+    url: '/client-dashboard',
+    views: {
+      'home-dash': {
+        templateUrl: 'templates/client-dashboard.html',
+        controller: 'ClientDashboardCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

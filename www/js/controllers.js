@@ -34,6 +34,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('RealtorSignUpCtrl', function($scope, Users) {
+  $scope.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  $scope.years = ['2016', '2017', '2018', '2019', '2020'];
+
   $scope.countries = ['Canada', 'United States'];
 
   $scope.canadaProvinces = ['Ontario', 'Quebec', 'Nova Scotia', 'New Brunswick', 'Manitoba', 'British Columbia', 'Prince Edward Island', 'Sasktchewan', 'Alberta', 'Newfoundland and Labrador'];
@@ -43,4 +46,26 @@ angular.module('starter.controllers', [])
   $scope.addUser = function (user) {
     $scope.users.push(angular.copy(user));
   };
+})
+
+.controller('HomeownerSignUpCtrl', function ($scope) {
+  $scope.propertyTypes = ['Condo', 'Townhouse', 'Loft', 'Basement', 'Office Building'];
+})
+
+.controller('ClientDashboardCtrl', function ($scope) {
+  $scope.deleteMessage = function  (message) {
+    $scope.messages.splice($scope.messages.indexOf(message),1);
+  };
+
+  $scope.messages = [
+    {name: 'Jack Trenton(My Agent)', date: 'Oct 23, 2015', subject: 'Re: Closing date', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Jays Street Sale', date: 'Oct 20, 2015', subject: 'Event sometime this week', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Vander Wield', date: 'Oct 18, 2015', subject: 'Wus good', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Russell Martin', date: 'Oct 16, 2015', subject: 'Housewarming Invitation', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Jonathan Spencer', date: 'Oct 13, 2015', subject: 'Re: Closing date', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Adrian Bromfield', date: 'Oct 10, 2015', subject: 'Re: Flood', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Jack The Ripper', date: 'Oct 10, 2015', subject: 'Caught a body', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Jill Slurpy', date: 'Oct 8, 2015', subject: 'Re: Closing date', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'},
+    {name: 'Jack Trenton(My Agent)', date: 'Oct 8, 2015', subject: 'Re: Closing date', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget sapien lobortis, aliquet mi et, iaculis sapien. Sed tincidunt nec enim vitae vehicula.'}
+  ]
 });

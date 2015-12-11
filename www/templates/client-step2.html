@@ -1,0 +1,31 @@
+<ion-view hide-nav-bar="false" view-title="PROPERTY INFORMATION" class="userAuth">
+	<ion-content class="padding">
+		<img src="img/Icon_2StepNav_02.png" style="display:block;width:25%;margin:0 auto;">
+
+		<form>
+			<label>Do You Own or Rent?</label>
+			<select ng-model="client.propertyType" ng-options="pType for pType in propertyType">
+				<option disabled selected value="">Select a Property Type</option>
+			</select>
+
+			<div>
+				<label>Address</label>
+				<input type="text" placeholder="Address" ng-model="client.address">
+				<div>
+					<select>
+						<option selected="" disabled="" value="">Country</option>
+					</select>
+					<select>
+						<option selected="" disabled="" value="">Province/State</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" placeholder="City">
+					<input type="text" placeholder="Postal Code/Zip">
+				</div>
+			</div>
+
+			<button class="button button-full progress-button" ui-sref="home.client-dashboard">Save</button>
+		</form>
+	</ion-content>
+</ion-view>

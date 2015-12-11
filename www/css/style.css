@@ -2,12 +2,33 @@
 .status-bar{
   background-color: #636363;
 }
+/*Style for tab*/
+.bar.bar-stable{
+  background-color: #636363;
+}
+/*Style for tab text and button*/
+.bar.bar-stable .title, .bar.bar-stable .button.button-clear{
+  color: #fff;
+  text-align: center;
+}
+/*Styles for pages with user authentication DARK BG*/
 .userAuth{
   background-color: #2f2f2f;
+  color: #fff;
 }
+.userAuth h4{
+  color:#fff;
+  padding:0px 5px 0px 5px;
+  margin: 0px 0px;
+  font-weight: 600;
+}
+
 .progress-button{
   background-color:#ffa801;
   color: #fff;
+}
+.skip-button{
+  background-color: #959595;
 }
 .countrySelector{
 	margin-top:12.5px;
@@ -21,10 +42,9 @@
   height: 100%;
 }
 .slider-slide {
-  color: #000;
-  background-color: #fff;
   text-align: center;
-
+  background-color:rgba(0,0,0,0); 
+  color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
 }
@@ -35,7 +55,88 @@
   display: inline-block;
 
 }
-.col1, .col2, .col3{
-  background: grey;
+.theme-row{
+  display: flex;
+  justify-content: space-around;
+}
+.theme-row > span{
+  display:inline-block; 
+  margin:5px; 
+  width:73px;
+  height:35px;
+}
+.theme1{background-color:#ffa801;}
+.theme2{background-color:#F2B3A0;}
+.theme3{background-color:#85F3FF;}
+.theme4{background-color:#8DEBC4;}
+.theme5{background-color:#D391ED;}
+.theme6{background-color:#F58207;}
+.theme7{background-color:#FF0A0A;}
+.theme8{background-color:#1A8591;}
+.theme9{background-color:#15BD77;}
+.theme10{background-color:#9B41BF;}
+.theme11{background-color:#FF6600;}
+.theme12{background-color:#7D0202;;}
+.theme13{background-color:#00555E;}
+.theme14{background-color:#085736;}
+.theme15{background-color:#43055C;}
+
+/* Realtor Sign Up step 3 */ 
+.realtor-signup-step3 {
+  
+}
+.company-info h4, .company-info input{
+  margin-bottom: 12px;
+} 
+.company-info select{
+  font-size: 20px;
+}
+.company-info span{
+  display:flex;
+  justify-content:space-between;
+}
+.company-info select, .company-info span input{
+  flex:1;
+  margin: 2px;
+}
+.realtor-signup-last-step input{
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+}
+.sub-type select{
+  width: 100%;
+}
+.billing-address .location-info span{
+  display: flex;
   text-align: center;
-  }
+}
+.billing-address .location-info span input{
+  margin: 0px 10px 10px 0px;
+}
+.billing-address .location-info span input:nth-child(2){
+  margin-right: 0px;
+}
+.userAuth .btm-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.userAuth .btm-buttons input{
+  margin: 0px 5px ;
+}
+
+/* Client Dashboard styles */
+.item-complex .item-content{
+  padding-right: 16px;
+}
+.clientDash .scroll-content{
+  margin-top: 16px;
+}
+.clientDash .bar{
+  height: 55px;
+  margin-bottom: 5px;
+}
+.clientDash .bar .title{
+  left: -8px;
+  height: 44px;
+}
