@@ -8,6 +8,16 @@ angular.module('starter.controllers', [])
   }
 })
 
+.controller('SignupCtrl', function ($scope) {
+  // body...
+})
+
+.controller('DashboardCtrl', function ($scope) {
+  $scope.toggleLeft = function ($scope, $ionicSideMenuDelegate) {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -55,6 +65,12 @@ angular.module('starter.controllers', [])
 .controller('ClientDashboardCtrl', function ($scope) {
   $scope.deleteMessage = function  (message) {
     $scope.messages.splice($scope.messages.indexOf(message),1);
+
+    $scope.toggleLeft = function ($scope, $ionicSideMenuDelegate) {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+
+  $scope.address = '123 Fakename St. Toronto, Ontario';
   };
 
   $scope.messages = [

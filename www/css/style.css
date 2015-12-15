@@ -11,18 +11,28 @@
   color: #fff;
   text-align: center;
 }
+.primary-color{
+  background-color: #ffa801;
+}
+.primary-background-color{
+  color: #2f2f2f;
+}
 /*Styles for pages with user authentication DARK BG*/
 .userAuth{
   background-color: #2f2f2f;
   color: #fff;
 }
-.userAuth h4{
+.userAuth h4, .userAuth h3{
   color:#fff;
   padding:0px 5px 0px 5px;
   margin: 0px 0px;
   font-weight: 600;
 }
-
+.login-page a{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
 .progress-button{
   background-color:#ffa801;
   color: #fff;
@@ -82,7 +92,7 @@
 .theme15{background-color:#43055C;}
 
 /* Realtor Sign Up step 3 */ 
-.realtor-signup-step3 {
+.realtor-step-3 {
   
 }
 .company-info h4, .company-info input{
@@ -98,6 +108,9 @@
 .company-info select, .company-info span input{
   flex:1;
   margin: 2px;
+}
+.company-info input{
+  width: 100%;
 }
 .realtor-signup-last-step input{
   width: 100%;
@@ -140,3 +153,85 @@
   left: -8px;
   height: 44px;
 }
+
+/* Client address details style*/
+.address-details .section-header{
+  background-color: #d7d7d7;
+  color: black;
+}
+.address-details{
+  background-color: #F7F7F9;
+  color: black;
+}
+.address-details .section-header{padding: 10px; font-weight: 500;}
+.address-details span{margin-bottom: 10px;}
+.address-information .item-stacked-label{
+  display: inline-block;
+}
+.address-details .section-content .input-label{
+  width: inherit;
+}
+.address-information .span1, .address-information .span2, .important-information .span1, .important-information .span2, .important-information .span3, .additional-information div > span{
+  display: inline-flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.address-information .span2 label, .important-information .span1 label, .important-information .span2 label{
+  width: 33%;
+}
+.address-information .span1 label{width: 49%;}
+.important-information .span3 label{width: 49%;}
+.additional-information span label{width: 49%;}
+.address-information .span1 input, .address-information .span2 input, .important-information .span1 input, .important-information .span2 input, .important-information .span3 input, .additional-information span input{
+  width: 100%;
+}
+.address-information span{
+ 
+}
+.important-information .span1 label:first-child{
+  display: inline-flex;
+  flex-direction: column;
+}
+.important-information label select{height: 34px;}
+.important-information .span1 span{
+  width: 100%;
+}
+.address-details .section-content > label{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.address-details .btm-buttons button{width: 47%;}
+
+/*Connect With My Agent*/
+.connect-with-my-agent .agent-header{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  height: 40%;
+  width: 100%;
+  background-color: rgb(70,70,70);
+}
+.connect-with-my-agent .agent-image-container{
+    text-align: center;
+    background-color: rgb(99,99,99);
+    margin-top: 10px;
+    border-radius: 50%;
+    width: 33%;
+}
+img.agent-image
+{
+    border-radius: 50%;
+    width: 94%;
+    margin-top: 5px;
+}
+.agent-header h3, p{color: white;}
+.agent-header p{text-align: center;}
+.agent-header span img{height:30px;margin: 5px}
+.agent-header span{display: inline-flex;align-items:center;}
+.connect-with-my-agent .agent-info{
+  background-color: rgb(247,247,249);
+}
+.agent-info p{color: black;}

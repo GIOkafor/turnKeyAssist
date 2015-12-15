@@ -35,7 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     .state('home', {
     url: '/home',
     abstract: true,
-    templateUrl: 'templates/tab-dash.html'
+    templateUrl: 'templates/tabs.html'
   })
 
   // Each tab has its own nav history stack:
@@ -139,15 +139,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
-    .state('home.client-dashboard', {
+  //Another abstract state for menu
+  .state('dashboard',{
+    url: 'dashboard',
+    abstract:true,
+    templateUrl: 'templates/menu.html',
+    controller: 'DashboardCtrl'
+  })
+
+    .state('dashboard.client-dashboard', {
     url: '/client-dashboard',
     views: {
-      'home-dash': {
+      'menu': {
         templateUrl: 'templates/client-dashboard.html',
         controller: 'ClientDashboardCtrl'
       }
     }
-  });
+  })
+    
+  .state('dashboard.address-details', {
+    url: '/address-details',
+    views: {
+      'menu': {
+        templateUrl: 'templates/address-details.html',
+        controller: 'ClientDashboardCtrl'
+      }
+    }
+  })
+
+  .state('dashboard.connect-with-my-agent', {
+    url: '/connect-with-my-agent',
+    views: {
+      'menu': {
+        templateUrl: 'templates/connect-with-my-agent.html',
+        controller: 'ClientDashboardCtrl'
+      }
+    }
+  })
+    ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home/dash');
