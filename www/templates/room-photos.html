@@ -1,1 +1,9 @@
-room-photos
+<ion-view title="Room Photos">
+	<ion-content>
+		<button class="button button-energized" ng-click="addImage()">Add image</button>
+
+		<div class="list">
+			<img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px">
+		</div>
+	</ion-content>
+</ion-view>
