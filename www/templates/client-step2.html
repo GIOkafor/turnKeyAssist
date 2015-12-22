@@ -1,27 +1,33 @@
 <ion-view hide-nav-bar="false" view-title="PROPERTY INFORMATION" class="userAuth">
 	<ion-content class="padding">
-		<img src="img/Icon_2StepNav_02.png" style="display:block;width:25%;margin:0 auto;">
+		<img src="img/Icon_2StepNav_02.png" style="display:block;width:25%;">
 
 		<form>
-			<label>Do You Own or Rent?</label>
-			<select ng-model="client.propertyType" ng-options="pType for pType in propertyType">
-				<option disabled selected value="">Select a Property Type</option>
-			</select>
-
+			<div class="own-or-rent">
+				<label>Do You Own or Rent?</label>
+				<select ng-model="client.propertyType" ng-options="pType for pType in propertyType">
+					<option disabled selected value="">Select a Property Type</option>
+				</select>
+			</div>	
+			
 			<div>
 				<label>Address</label>
-				<input type="text" placeholder="Address" ng-model="client.address">
-				<div>
-					<select>
-						<option selected="" disabled="" value="">Country</option>
-					</select>
-					<select>
-						<option selected="" disabled="" value="">Province/State</option>
-					</select>
+				<input class="full-width-input" type="text" placeholder="Address" ng-model="client.address">
+				<div class="inline-select">
+					<label class="item item-input item-select">
+						<select>
+							<option selected="" disabled="" value="">Country</option>
+						</select>
+					</label>
+					<label class="item item-input item-select" style="margin-left:5px;">
+						<select>
+							<option selected="" disabled="" value="">Province/State</option>
+						</select>
+					</label>
 				</div>
 				<div>
-					<input type="text" placeholder="City">
-					<input type="text" placeholder="Postal Code/Zip">
+					<input class="full-width-input" type="text" placeholder="City">
+					<input class="full-width-input" type="text" placeholder="Postal Code/Zip">
 				</div>
 			</div>
 

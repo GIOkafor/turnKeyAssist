@@ -139,6 +139,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+    //realtor menu
+    .state('realtor-dashboard', {
+      url: 'realtor-dashboard',
+      abstract: true,
+      templateUrl: 'templates/realtor-menu.html',
+      controller: 'RealtorDashboardCtrl'
+    })
+
+    .state('realtor-dashboard.messages', {
+    url: '/messages',
+    views: {
+      'realtor-menu': {
+        templateUrl: 'templates/realtor-dashboard-messages.html',
+        controller: 'RealtorDashboardCtrl'
+      }
+    }
+  })
 
   //Another abstract state for menu
   .state('dashboard',{
@@ -177,6 +194,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+
+.state('dashboard.real-estate-dictionary', {
+    url: '/real-estate-dictionary',
+    views: {
+      'menu': {
+        templateUrl: 'templates/real-estate-dictionary.html',
+        controller: 'RealEstateDictionaryCtrl'
+      }
+    }
+  })
+
+.state('dashboard.to-do-lists', {
+    url: '/to-do-lists',
+    views: {
+      'menu': {
+        templateUrl: 'templates/to-do-lists.html',
+        controller: 'ToDoListCtrl'
+      }
+    }
+  })
+
+.state('dashboard.to-do-list', {
+  url: '/todos',
+  abstract: true,
+  views: {
+    'menu': {
+      template: '<ion-nav-view></ion-nav-view>'
+    }
+  }
+})
+
+.state('dashboard.to-do-list.details', {
+    //url: '/:to-do-lists-details',
+    templateUrl: 'templates/to-do-lists-details.html',
+    controller: 'ToDoListCtrl'
+})
 
   .state('dashboard.room-photos', {
     url: '/room-photos',

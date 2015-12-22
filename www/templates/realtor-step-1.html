@@ -1,6 +1,6 @@
 <ion-view view-title="CREATE A REALTOR ACCOUNT" hide-nav-bar="false" class="userAuth">
 	<ion-content class="padding">
-		<img src="img/Icon_4StepNav_01.png" style="display:block;width:80%;margin:0 auto;">
+		<img src="img/Icon_4StepNav_01.png">
 		<form ng-submit="addUser(user)" name="realtor-signup-form">
 
 			<h4>Account Information</h4>
@@ -33,9 +33,13 @@
 					<input type="number" placeholder="Mobile Telephone" ng-model="user.mobiletelephone">
 				</label>
 
-				<div class="item item-input-inset">
-					<select class="padding" ng-model="user.country" ng-options="c for c in countries" required>
-					</select>
+				<div style="display:inline-flex; width:100%;">
+					<label class="item item-input item-select" style="display:inline-flex;width:50%;height:46px;">
+						<select class="padding" style="position:absolute;left:15px;top:5px;padding-left:0px;padding-right:0px;" ng-model="user.country" ng-options="c for c in countries" required>
+							<option value="" selected disabled>Country</option>
+						</select>
+					</label>
+					
 					<label class="item item-input" style="margin-left: 10px">
 						<input type="text" placeholder="City" required>
 					</label>
@@ -51,7 +55,7 @@
 				</label>
 			</div>
 
-			<div style="text-align:center;width:100%;">
+			<div style="display:inline-flex;justify-content:space-between;padding:5px;width:100%;">
 				<button style="width:45%;" class="button skip-button">Cancel</button>
 				<input type="submit" ui-sref="home.realtor-step-2" style="width:45%;" class="button progress-button" value="Submit" ng-click="addUser(user)">
 		</form>

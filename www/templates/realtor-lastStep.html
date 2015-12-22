@@ -1,6 +1,6 @@
 <ion-view hide-nav-bar="false" view-title="LAST STEP" class="userAuth">
 	<ion-content class="padding realtor-signup-last-step">
-		<img src="img/Icon_4StepNav_04.png" style="display:block;width:80%;margin:0 auto;">
+		<img src="img/Icon_4StepNav_04.png">
 
 		<form>
 			<div class="sub-type">	
@@ -15,14 +15,20 @@
 				<input type="number" placeholder="Credit Card Number" maxlength="16">
 				<input type="text" placeholder="Name On Card">
 
-				<div class="card-expiry-info">
-					<select ng-options="m for m in months" ng-model="user.cardExpirationMonth">
-						<option value="" disabled selected>Expiration Month</option>
-					</select>
-					<select ng-options="y for y in years" ng-model="user.cardExpirationYear">
-						<option value="" disabled selected>Expiration year</option>
-					</select>
-				</div>
+				<div class="card-expiry-info" style="display:inline-flex; width:100%;">
+					<label class="item item-input item-select" style="display:inline-flex;width:50%;height:40px;">
+						<select class="padding" style="position:absolute;left:15px;top:5px;padding-left:0px;padding-right:0px;" ng-options="m for m in months" ng-model="user.cardExpirationMonth">
+							<option value="" disabled selected>Expiration Month</option>
+						</select>
+					</label>
+
+					<label class="item item-input item-select" style="display:inline-flex;width:50%;height:40px;">
+						<select class="padding" style="position:absolute;left:15px;top:5px;padding-left:0px;padding-right:0px;" ng-options="y for y in years" ng-model="user.cardExpirationYear">
+							<option value="" disabled selected>Expiration Year</option>
+						</select>
+					</label>
+				</div>	
+
 			</div>
 
 			<div class="billing-address">
@@ -44,8 +50,8 @@
 				
 			</div> 
 			<span class="btm-buttons">
-				<input type="button" class="button skip-button" value="Skip" ui-sref="realtor.dashboard">
-				<input type="button" class="button progress-button" value="Done" ui-sref="realtor.dashboard">
+				<input type="button" class="button skip-button" value="Skip" ui-sref="home.login">
+				<input type="button" class="button progress-button" value="Done" ui-sref="home.login">
 			</span>
 		</form>
 	</ion-content>

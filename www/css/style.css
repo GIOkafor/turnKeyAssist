@@ -17,10 +17,40 @@
 .primary-background-color{
   color: #2f2f2f;
 }
+
+/*Styles for menu*/
+.side-menu{
+  background-color: black;
+}
+.side-menu .item-content{
+  background-color: black;
+  color: rgb(255,255,255);
+  display: inline-flex;
+  width: 100%;
+  align-items:center;
+}
+.side-menu .item-content img{height: 30px; margin-right: 10px;}
+.side-menu-list div{
+  background-color: black;
+}
+.side-menu .item{
+  border: none;
+}
+.side-menu-footer{
+  background-color: black;
+}
 /*Styles for pages with user authentication DARK BG*/
 .userAuth{
   background-color: #2f2f2f;
   color: #fff;
+}
+.userAuth img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
 .userAuth h4, .userAuth h3{
   color:#fff;
@@ -57,6 +87,27 @@
   color:white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
+}
+.inline-select{
+  display: inline-flex;
+  width: 100%;
+}
+.inline-select label{
+  display: inline-flex;
+  width: 50%;
+  height: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.inline-select select{
+  top: 5px;
+  left: 15px;
+  padding-right: 0px;
+  padding-left:0px;
+}
+.full-width-input{
+  width: 100%;
+  margin-bottom: 5px;
 }
 .theme-selector{
 
@@ -135,7 +186,34 @@
   justify-content: space-between;
 }
 .userAuth .btm-buttons input{
-  margin: 0px 5px ;
+ width: 49%;
+}
+/*Realtor Last Step*/
+.sub-type, .billing-info, .billing-address{
+  margin-bottom: 10px;
+}
+.sub-type h4{
+  margin-bottom: 5px;
+}
+
+/*Client step1*/
+.activation-code{
+  margin-bottom: 10px;
+}
+.activation-code i{
+  font-size: 24px;
+  padding-right: 6px;
+}
+.account-info .inline-select input{
+  width: 49.5%;
+}
+.account-info h4{margin-bottom: 10px;}
+/*Client sign up step2 */
+.own-or-rent{
+  display: inline-flex;
+  flex-direction:column;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* Client Dashboard styles */
@@ -143,7 +221,7 @@
   padding-right: 16px;
 }
 .clientDash .scroll-content{
-  margin-top: 16px;
+  
 }
 .clientDash .bar{
   height: 55px;
@@ -235,3 +313,12 @@ img.agent-image
   background-color: rgb(247,247,249);
 }
 .agent-info p{color: black;}
+
+/* Real Estate Dictionary */
+.dictionary-content .search-div{
+  margin-top: 2px;
+}
+.dictionary-content .item{margin:0px;}
+
+/* TO-DO LIsts*/
+.to-do-list .item{margin:0px;}

@@ -1,0 +1,10 @@
+<ion-view>
+	<ion-content>
+		<ion-nav-view name="to-do-lists-details" ng-repeat="list in lists">
+			<h2>{{list.name}}</h2>
+			<ul>
+				<li ng-repeat="det in list.list">{{det}}</li>
+			</ul>
+		</ion-nav-view>
+	</ion-content>
+</ion-view>

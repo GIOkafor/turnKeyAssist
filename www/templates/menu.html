@@ -13,51 +13,56 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
-    <ion-content>
-      <ion-list>
+    <ion-content class="side-menu">
+      <ion-list class="side-menu-list">
         <ion-item menu-close ui-sref="dashboard.client-dashboard">
-          My Journal Dashboard
+         <img src="img/Icon_Dashboard_Message.png"> My Journal Dashboard
         </ion-item>
         <ion-item menu-close ui-sref="dashboard.address-details">
-          Address Details
+          <img src="img/Icon_Dashboard_Address.png">Address Details
         </ion-item>
         <ion-item menu-close ui-sref="dashboard.connect-with-my-agent">
-          Connect With My Agent
+          <img src="img/Icon_Dashboard_Connect.png">Connect With My Agent
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Real Estate Dictionary 
+        <ion-item menu-close ui-sref="dashboard.real-estate-dictionary">
+          <img src="img/Icon_Dashboard_Dictionary.png">Real Estate Dictionary 
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          To Do Lists
+        <ion-item menu-close ui-sref="dashboard.to-do-lists">
+          <img src="img/Icon_Dashboard_ToDoList.png">To Do Lists
         </ion-item>
         <ion-item menu-close href="#">
-          Decorating Plans
+          <img src="img/Icon_Dashboard_Decorating.png">Decorating Plans
         </ion-item>
         <ion-item menu-close href="">
-          Manage Dimensions
+          <img src="img/Icon_Dashboard_Dimensions.png">Manage Dimensions
         </ion-item>
         <ion-item menu-close ui-sref="dashboard.room-photos">
-          Room Photos
+          <img src="img/Icon_Dashboard_RoomPhoto.png">Room Photos
         </ion-item>
         <ion-item menu-close href="">
-          My Service Providers
+          <img src="img/Icon_Dashboard_ServiceProviders.png">My Service Providers
         </ion-item>
         <ion-item menu-close href="">
-          Mortgage Principal Tracker
+          <img src="img/Icon_Dashboard_Tracker.png">Mortgage Principal Tracker
         </ion-item>
         <ion-item menu-close href="">
-          Reminders
+          <img src="img/Icon_Dashboard_Reminders.png">Reminders
         </ion-item>
         <ion-item menu-close href="">
-          Notes
+          <img src="img/Icon_Dashboard_Note.png">Notes
         </ion-item>
         <ion-item menu-close href="">
-          Local Directory
+          <img src="img/Icon_Dashboard_LocalDirectory.png">Local Directory
         </ion-item>
       </ion-list>
     </ion-content>
+
+    <ion-footer-bar class="bar bar-footer side-menu-footer">
+      <a class="button button-clear button-icon"><img src="img/Icon_Dashboard_setting.png" style="height:20px; margin-right:10px;">Settings</a>
+      <a class="button button-clear button-icon"><img src="img/Icon_Dashboard_signout.png" style="height:20px; margin-right:10px;">Sign Out</a>
+    </ion-footer-bar>
   </ion-side-menu>
 </ion-side-menus>
